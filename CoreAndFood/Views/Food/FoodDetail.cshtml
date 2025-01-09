@@ -1,0 +1,40 @@
+﻿@model Food
+@{
+    ViewData["Title"] = "FoodDetail";
+}
+
+<input type="hidden" asp-for="FoodId" />
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Food Details</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+
+                            <b> Food Id :</b> @Model.FoodId
+                            <br />
+                            <b>Food Name :</b> @Model.FoodName
+                            <br />
+                            <b>Description :</b> @Model.Description
+                            <br />
+                            <b>Price :</b> @Model.Price
+                            <br />
+                            <b>Image Url :</b> @Model.ImageUrl
+                            <br />
+                            <b>Stock :</b> @Model.Stock
+                            <br />
+                            <b>Ctegory Id :</b> @Model.CategoryId
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <a class="btn btn-primary" asp-action="Index" asp-controller="Food">Food Page</a>
+            </div>
+        </div>
+    </div>
+</div>

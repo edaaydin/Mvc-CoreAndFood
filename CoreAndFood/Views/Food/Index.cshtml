@@ -1,0 +1,59 @@
+﻿@model IPagedList<Food>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <table class="table table-bordered table-striped">
+
+        <tr>
+            <th>ID</th>
+            <th>Food Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Category Name</th>
+
+            <th>Update</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.FoodId</th>
+                <td>@item.FoodName</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>@item.Category.CategoryName</td>
+
+                <td>
+                    <a asp-action="FoodGet" asp-controller="Food" asp-route-id="@item.FoodId" class="btn btn-warning">Update</a>
+                </td>
+                <td>
+                    <a asp-action="FoodDetail" asp-controller="Food" asp-route-id="@item.FoodId" class="btn btn-info">Details</a>
+                </td>
+                <td>
+                    <a asp-action="FoodDelete" asp-controller="Food" asp-route-id="@item.FoodId" class="btn btn-success">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="pagination-container ">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+
+</div>
+
+@* 
+<div class="pagination-container">
+    <asp-pagedlistpager page-size="Model.PageSize"
+                        total-item-count="Model.TotalItemCount"
+                        page-url-format="@Url.Action("Index", new { page })">
+    </asp-pagedlistpager>
+</div> *@
+
+<a class="btn btn-primary" asp-action="FoodAdd" asp-controller="Food">New Food</a>
+
+
