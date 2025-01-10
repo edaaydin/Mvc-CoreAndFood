@@ -1,4 +1,6 @@
-# 🚀 ASP.NET Core MVC ile geliştirdiğim “Core and Food” projesi, yemekler ve kategoriler üzerine yönetim sistemi sunuyor. İşte projenin sunduğu bazı özellikler:
+# 🚀 ASP.NET Core MVC ile geliştirdiğim “Core and Food” projesi.
+
+Bu proje yemekler ve kategoriler üzerine yönetim sistemi sunuyor. İşte projenin sunduğu bazı özellikler:
 
 🍽 Yemek Yönetimi:
 <br>
