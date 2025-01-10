@@ -6,6 +6,7 @@
  • Yemek ekleme, güncelleme, detayları görüntüleme ve silme işlemleri kolayca yapılabiliyor.
 
 🗂 Kategori Yönetimi:
+<br>
  • Kategoriler eklenebilir ve güncellenebilir.
  • Silme işlemi yerine kategori statüsü “false” yapılır, böylece veriler kaybolmaz.
 
